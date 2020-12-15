@@ -33,7 +33,7 @@ if (( $RAPIDS_RESULT >= 11 )) ;then
   echo "Please COMPARE the \"SCRIPT TO COPY\" with the code in the above cell.  If they are the same, just type any key.  If not, do steps 2-4. "
   echo " "
   echo "SCRIPT TO COPY: "
-  echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
+  echo "!wget -nc https://raw.githubusercontent.com/msserpa/notebooks-contrib/branch-0.14/utils/rapids-colab.sh"
   echo "!bash rapids-colab.sh"
   echo "import sys, os"
   echo "dist_package_index = sys.path.index\('/usr/local/lib/python3.6/dist-packages'\)"
@@ -53,7 +53,7 @@ if (( $RAPIDS_RESULT >= 11 )) ;then
     echo "3. RERUN the cell"
     echo " "
     echo "SCRIPT TO COPY:"
-    echo "!wget -nc https://raw.githubusercontent.com/rapidsai/notebooks-contrib/master/utils/rapids-colab.sh"
+    echo "!wget -nc https://raw.githubusercontent.com/msserpa/notebooks-contrib/branch-0.14/utils/rapids-colab.sh"
     echo "!bash rapids-colab.sh"
     echo "import sys, os"
     echo "dist_package_index = sys.path.index\('/usr/local/lib/python3.6/dist-packages'\)"
@@ -70,7 +70,7 @@ else
   echo "You may not have to change anything.  All versions of our script should work with this version of Colab"
 fi
 
-wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/env-check.py
+wget -nc https://raw.githubusercontent.com/msserpa/notebooks-contrib/branch-0.14/utils/env-check.py
 echo "Checking for GPU type:"
 python env-check.py
 
@@ -95,7 +95,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
                 cudf=$RAPIDS_VERSION cuml cugraph gcsfs pynvml cuspatial xgboost\
                 dask-cudf
         # check to make sure that pyarrow is running the right version (0.15) for v0.11 or later
-        wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/update_pyarrow.py
+        wget -nc https://raw.githubusercontent.com/msserpa/notebooks-contrib/branch-0.14/utils/update_pyarrow.py
     elif (( $RAPIDS_RESULT >= 11 )) ;then #Stable packages requiring PyArrow 0.15
         echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
         echo "Please standby, this will take a few minutes..."
@@ -106,7 +106,7 @@ if [ ! -f Miniconda3-4.5.4-Linux-x86_64.sh ]; then
             cudf=$RAPIDS_VERSION cuml cugraph cuspatial gcsfs pynvml xgboost\
             dask-cudf
         # check to make sure that pyarrow is running the right version (0.15) for v0.11 or later
-        wget -nc https://github.com/rapidsai/notebooks-contrib/raw/master/utils/update_pyarrow.py
+        wget -nc https://raw.githubusercontent.com/msserpa/notebooks-contrib/branch-0.14/utils/update_pyarrow.py
     else
         echo "Installing RAPIDS $RAPIDS_VERSION packages from the stable release channel"
         echo "Please standby, this will take a few minutes..."
