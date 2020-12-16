@@ -2,7 +2,7 @@
 
 set -eu
 
-ln -s /usr/local/bin/python /usr/local/bin/python3.6
+ln /usr/local/bin/python /usr/local/bin/python3.6
 
 echo "PLEASE READ"
 echo "********************************************************************************************************"
